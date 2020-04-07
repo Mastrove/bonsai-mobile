@@ -47,7 +47,6 @@ class SprintCard extends StatelessWidget {
                 '.',
                 style: TextStyle(
                   color: Color(0xFF0F7EFF),
-//                height: 4.9,
                   fontSize: 32,
                   fontWeight: FontWeight.bold,
                 ),
@@ -71,7 +70,6 @@ class SprintCard extends StatelessWidget {
           height: 20.0,
         ),
         Row(
-//          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
             Icon(
               Icons.chat_bubble_outline,
