@@ -1,6 +1,7 @@
 import 'package:accpatapp/components/app_scaffold.dart';
 import 'package:accpatapp/models/comment_data.dart';
 import 'package:accpatapp/models/comment_reply_data.dart';
+import 'package:accpatapp/models/feed_data.dart';
 import 'package:accpatapp/models/notification_data.dart';
 import 'package:accpatapp/models/sprint_data.dart';
 import 'package:accpatapp/screens/home_screen.dart';
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (context) => CommentData()),
         ChangeNotifierProvider(create: (context) => CommentReplyData()),
         ChangeNotifierProvider(create: (context) => NotificationData()),
+        ChangeNotifierProvider(create: (context) => FeedData()),
       ],
       child: MaterialApp(
         home: AppScaffold(),

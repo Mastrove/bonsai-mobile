@@ -1,16 +1,12 @@
+import 'package:accpatapp/components/notification_row_icons.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class NotificationCard extends StatelessWidget {
-  final String notificationDate;
-  final String notificationDetails;
+class FeedCard extends StatelessWidget {
+  final String feedDate;
+  final String feedDetails;
 
-  final Widget notificationActions;
-  NotificationCard(
-      {this.notificationDetails,
-      this.notificationDate,
-      this.notificationActions});
+  FeedCard({this.feedDetails, this.feedDate});
 
   @override
   Widget build(BuildContext context) {
@@ -51,7 +47,7 @@ class NotificationCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Text(
-                  notificationDate,
+                  feedDate,
                   style: GoogleFonts.roboto(
                     fontStyle: FontStyle.normal,
                     fontWeight: FontWeight.w300,
@@ -66,7 +62,7 @@ class NotificationCard extends StatelessWidget {
                 Flexible(
                   fit: FlexFit.loose,
                   child: Text(
-                    notificationDetails,
+                    feedDetails,
                     style: GoogleFonts.roboto(
                       fontStyle: FontStyle.normal,
                       fontWeight: FontWeight.w300,
@@ -76,15 +72,15 @@ class NotificationCard extends StatelessWidget {
                   ),
                 ),
                 Container(
-                    padding: EdgeInsets.only(
-                      top: 12.0,
-                    ),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        notificationActions,
-                      ],
-                    ),
+                  padding: EdgeInsets.only(
+                    top: 12.0,
+                  ),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      NotificationRowIcons(),
+                    ],
+                  ),
                 ),
               ],
             ),
