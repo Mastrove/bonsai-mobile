@@ -5,6 +5,7 @@ import 'package:accpatapp/models/feed_data.dart';
 import 'package:accpatapp/models/notification_data.dart';
 import 'package:accpatapp/models/partner_data.dart';
 import 'package:accpatapp/models/sprint_data.dart';
+import 'package:accpatapp/models/watching_data.dart';
 import 'package:accpatapp/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (context) => NotificationData()),
         ChangeNotifierProvider(create: (context) => FeedData()),
         ChangeNotifierProvider(create: (context) => PartnerData()),
+        ChangeNotifierProvider(create: (context) => WatchingData()),
       ],
       child: MaterialApp(
         home: AppScaffold(),
