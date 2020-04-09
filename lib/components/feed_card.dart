@@ -15,7 +15,7 @@ class FeedCard extends StatelessWidget {
         border: Border(
           top: BorderSide(
             width: 0.5,
-            color: Color(0xFFC4C4C4),
+            color: Color(0xFFE5E5E5),
           ),
         ),
       ),
