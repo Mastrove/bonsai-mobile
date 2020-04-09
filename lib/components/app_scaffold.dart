@@ -1,4 +1,6 @@
 import 'package:accpatapp/screens/feeds_screen.dart';
+import 'package:accpatapp/screens/partners_screen.dart';
+import 'package:accpatapp/screens/watching_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -22,6 +24,8 @@ class _AppScaffoldState extends State<AppScaffold> {
       HomeScreen(),
       NotificationsScreen(),
       FeedsScreen(),
+      WatchingScreen(),
+      PartnersScreen(),
     ];
     _currentPage = _pageList[_currentIndex];
   }
