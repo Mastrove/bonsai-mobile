@@ -1,6 +1,7 @@
 import 'package:accpatapp/components/comments_list.dart';
 import 'package:accpatapp/components/sprints_list.dart';
 import 'package:accpatapp/components/app_bar_title.dart';
+import 'package:accpatapp/screens/create_sprint_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -78,6 +79,17 @@ class HomeScreen extends StatelessWidget {
           ),
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.pushNamed(context, CreateSprintScreen.id);
+        },
+        child: Icon(
+          Icons.mode_edit,
+          color: Colors.white,
+        ),
+        backgroundColor: Color(0xFF0F7EFF),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
     );
   }
 }
