@@ -1,8 +1,9 @@
 import 'package:accpatapp/components/comments_list.dart';
 import 'package:accpatapp/components/sprints_list.dart';
+import 'package:accpatapp/components/app_bar_title.dart';
+import 'package:accpatapp/screens/create_sprint_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:accpatapp/components/fixed_bottom_bar.dart';
 import 'package:provider/provider.dart';
 import 'package:accpatapp/models/sprint_data.dart';
 import 'package:intl/intl.dart';
@@ -28,13 +29,8 @@ class HomeScreen extends StatelessWidget {
             radius: 22.0,
           ),
         ),
-        title: Text(
-          'Home',
-          style: GoogleFonts.roboto(
-              fontStyle: FontStyle.normal,
-              fontSize: 20.0,
-              fontWeight: FontWeight.w500,
-              color: Colors.white),
+        title: AppBarTitle(
+          titleText: 'Home',
         ),
         backgroundColor: Color(0xFF1480ff),
       ),
@@ -73,13 +69,28 @@ class HomeScreen extends StatelessWidget {
                   color: Color(0xFF000000),
                 ),
               ),
-              SizedBox(height: 7.0,),
-              Container(child: CommentsList(),),
+              SizedBox(
+                height: 7.0,
+              ),
+              Container(
+                child: CommentsList(),
+              ),
             ],
           ),
         ),
       ),
-      bottomNavigationBar: FixedBottomBar(),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.pushNamed(context, CreateSprintScreen.id);
+        },
+        child: Icon(
+          Icons.mode_edit,
+          color: Colors.white,
+        ),
+        backgroundColor: Color(0xFF0F7EFF),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
     );
   }
 }
+
