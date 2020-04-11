@@ -1,6 +1,9 @@
+import 'package:accpatapp/screens/setup-checkin-screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:step_progress_indicator/step_progress_indicator.dart';
+import 'package:accpatapp/components/create_sprint_button.dart';
+import 'package:accpatapp/components/title_text.dart';
 
 class CreateSprintScreen extends StatelessWidget {
   static String id = 'create_sprint_screen';
@@ -18,15 +21,7 @@ class CreateSprintScreen extends StatelessWidget {
           ),
           child: Column(
             children: <Widget>[
-              Text(
-                'Quickly setup a sprint and let people support you',
-                style: GoogleFonts.roboto(
-                  fontSize: 20.0,
-                  fontWeight: FontWeight.w500,
-                  fontStyle: FontStyle.normal,
-                  color: Color(0xFF000000),
-                ),
-              ),
+              TitleText(textContent: 'Quickly setup a sprint and let people support you',),
               SizedBox(
                 height: 35.0,
               ),
@@ -108,23 +103,9 @@ class CreateSprintScreen extends StatelessWidget {
               SizedBox(
                 height: 26.0,
               ),
-              FlatButton(
-                onPressed: () {},
-                child: Text(
-                  'Next',
-                  style: GoogleFonts.roboto(
-                    fontSize: 18.0,
-                    fontWeight: FontWeight.bold,
-                    fontStyle: FontStyle.normal,
-                  ),
-                ),
-                textColor: Colors.white,
-                color: Color(0xFF0F7EFF),
-                padding: EdgeInsets.symmetric(
-                  vertical: 11.0,
-                  horizontal: 145.0,
-                ),
-              ),
+              CreateSprintButton(buttonText: 'Next', onButtonPress: (){
+                Navigator.pushNamed(context, SetupCheckInScreen.id);
+              },),
             ],
           ),
         ),
