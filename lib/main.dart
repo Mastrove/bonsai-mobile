@@ -28,6 +28,11 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (context) => WatchingData()),
       ],
       child: MaterialApp(
+        theme: ThemeData(
+          bottomSheetTheme: BottomSheetThemeData(
+            backgroundColor: Color(0xFFF0F0F0),
+          )
+        ),
         home: AppScaffold(),
         routes: {
           HomeScreen.id: (context) => HomeScreen(),
