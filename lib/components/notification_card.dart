@@ -17,9 +17,9 @@ class NotificationCard extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         border: Border(
-          top: BorderSide(
+          bottom: BorderSide(
             width: 0.5,
-            color: Color(0xFFE5E5E5),
+            color: Color(0xFFC4C4C4),
           ),
         ),
       ),
