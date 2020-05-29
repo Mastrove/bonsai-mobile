@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class SprintCard extends StatelessWidget {
   final String sprintTitle;
@@ -73,9 +72,9 @@ class SprintCard extends StatelessWidget {
         Row(
           children: <Widget>[
             Icon(
-              FontAwesomeIcons.comment              ,
+              Icons.chat_bubble_outline,
               color: Color(0xFF000000),
-              size: 35.0,
+              size: 40.0,
             ),
             SizedBox(
               width: 46.0,
@@ -100,17 +99,15 @@ class SprintCard extends StatelessWidget {
               width: 37.0,
             ),
             Container(
-              width: 105.0,
+              width: 100.0,
               height: 25.0,
-            padding: EdgeInsets.only(left: 2.0,),
             decoration: BoxDecoration(border: Border.all(width: 0.3,),),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
                   Icon(
-                    FontAwesomeIcons.eye,
+                    Icons.remove_red_eye,
                     color: Color(0xFF000000),
-                    size: 18.0,
                   ),
                   Text(
                     'watchers',

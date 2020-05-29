@@ -1,3 +1,4 @@
+import 'package:accpatapp/screens/feeds_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -20,6 +21,7 @@ class _AppScaffoldState extends State<AppScaffold> {
     _pageList = [
       HomeScreen(),
       NotificationsScreen(),
+      FeedsScreen(),
     ];
     _currentPage = _pageList[_currentIndex];
   }
@@ -66,6 +68,21 @@ class _AppScaffoldState extends State<AppScaffold> {
             ),
             title: Text(
               'Notifications',
+              style: GoogleFonts.roboto(
+                fontSize: 10.0,
+                fontWeight: FontWeight.w200,
+                fontStyle: FontStyle.normal,
+                color: Color(0xFF000000),
+              ),
+            ),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              FontAwesomeIcons.rss,
+              color: Color(0xFF000000),
+            ),
+            title: Text(
+              'Feed',
               style: GoogleFonts.roboto(
                 fontSize: 10.0,
                 fontWeight: FontWeight.w200,
