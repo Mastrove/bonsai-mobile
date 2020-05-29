@@ -8,6 +8,7 @@ import 'package:accpatapp/models/sprint_data.dart';
 import 'package:accpatapp/models/watching_data.dart';
 import 'package:accpatapp/screens/create_sprint_screen.dart';
 import 'package:accpatapp/screens/home_screen.dart';
+import 'package:accpatapp/screens/setup-checkin-screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -36,6 +37,7 @@ class MyApp extends StatelessWidget {
         routes: {
           HomeScreen.id: (context) => HomeScreen(),
           CreateSprintScreen.id: (context) => CreateSprintScreen(),
+          SetupCheckInScreen.id: (context) => SetupCheckInScreen()
         },
       ),
     );

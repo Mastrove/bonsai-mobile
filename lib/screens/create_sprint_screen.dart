@@ -1,3 +1,4 @@
+import 'package:accpatapp/screens/setup-checkin-screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:step_progress_indicator/step_progress_indicator.dart';
@@ -109,7 +110,9 @@ class CreateSprintScreen extends StatelessWidget {
                 height: 26.0,
               ),
               FlatButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, SetupCheckInScreen.id);
+                },
                 child: Text(
                   'Next',
                   style: GoogleFonts.roboto(
