@@ -6,6 +6,7 @@ import 'package:accpatapp/models/notification_data.dart';
 import 'package:accpatapp/models/partner_data.dart';
 import 'package:accpatapp/models/sprint_data.dart';
 import 'package:accpatapp/models/watching_data.dart';
+import 'package:accpatapp/screens/create_sprint_screen.dart';
 import 'package:accpatapp/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -29,6 +30,7 @@ class MyApp extends StatelessWidget {
         home: AppScaffold(),
         routes: {
           HomeScreen.id: (context) => HomeScreen(),
+          CreateSprintScreen.id: (context) => CreateSprintScreen(),
         },
       ),
     );
