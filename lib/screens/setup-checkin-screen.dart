@@ -1,5 +1,6 @@
 import 'package:accpatapp/components/create_sprint_button.dart';
 import 'package:accpatapp/components/title_text.dart';
+import 'package:accpatapp/screens/select_frequency_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:step_progress_indicator/step_progress_indicator.dart';
@@ -42,23 +43,45 @@ class SetupCheckInScreen extends StatelessWidget {
                       color: Color(0xFF000000),
                     ),
                   ),
-                  Row(
-                    children: <Widget>[
-                      Text(
-                        'Daily',
-                        style: GoogleFonts.roboto(
-                          fontSize: 16.0,
-                          fontWeight: FontWeight.w300,
-                          fontStyle: FontStyle.normal,
-                          color: Color(0xFF000000),
+                  GestureDetector(
+                    onTap: () {
+                      showModalBottomSheet(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.only(
+                            topRight: Radius.circular(40.0),
+                            topLeft: Radius.circular(40.0),
+                          ),
                         ),
-                      ),
-                      Icon(
-                        Icons.chevron_right,
-                        size: 26.0,
-                        color: Color(0xFFC4C4C4),
-                      ),
-                    ],
+                        context: context,
+                        builder: (context) => SingleChildScrollView(
+                          child: Container(
+                            padding: EdgeInsets.only(
+                                bottom:
+                                    MediaQuery.of(context).viewInsets.bottom),
+                            child: SelectFrequencyScreen(),
+                          ),
+                        ),
+                        isScrollControlled: true,
+                      );
+                    },
+                    child: Row(
+                      children: <Widget>[
+                        Text(
+                          'Daily',
+                          style: GoogleFonts.roboto(
+                            fontSize: 16.0,
+                            fontWeight: FontWeight.w300,
+                            fontStyle: FontStyle.normal,
+                            color: Color(0xFF000000),
+                          ),
+                        ),
+                        Icon(
+                          Icons.chevron_right,
+                          size: 26.0,
+                          color: Color(0xFFC4C4C4),
+                        ),
+                      ],
+                    ),
                   )
                 ],
               ),
